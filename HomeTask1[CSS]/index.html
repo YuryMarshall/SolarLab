@@ -1,21 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles/css/reset-styles.css" />
     <link rel="stylesheet" href="./styles/css/styles.css" />
     <title>Document</title>
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="header__top__container">
         <div class="header__buttons__container">
           <button class="button__enter">Войти</button>
           <button class="button__newAdvertisement">Новое объявление</button>
         </div>
       </div>
-      <div class="header__bottom__container"></div>
+      <div class="header__bottom__container">
+        <h1 class="header__title">Доска объявлений</h1>
+        <button class="category__button">Все категории</button>
+        <form class="search__form">
+          <input
+            type="search"
+            placeholder="Поиск по объявлениям"
+            class="serach__form__input"
+          />
+          <button type="submit" class="serach__form__submit">Найти</button>
+        </form>
+      </div>
     </header>
   </body>
 </html>

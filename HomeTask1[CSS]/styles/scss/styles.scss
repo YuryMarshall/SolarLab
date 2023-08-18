@@ -1,4 +1,6 @@
 $blueButton: #3b82f6;
+$siteDarkBlue: #1e293b;
+$siteGray: #e2e8f0;
 
 @mixin buttonText() {
   position: relative;
@@ -9,12 +11,21 @@ $blueButton: #3b82f6;
   color: white;
 }
 
+body {
+  font-family: "Inter", sans-serif;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid $siteGray;
+}
 .header__top__container {
   width: 100%;
   height: 52px;
   display: flex;
   justify-content: center;
-  background-color: #1e293b;
+  background-color: $siteDarkBlue;
   padding: 8px 0px;
 }
 .header__buttons__container {
@@ -57,11 +68,83 @@ $blueButton: #3b82f6;
   top: 7px;
   right: 12px;
 }
+.header__bottom__container {
+  display: flex;
+  width: 60%;
+  padding: 24px 0;
+}
+
+.header__title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: $siteDarkBlue;
+  margin-right: 24px;
+}
+.category__button {
+  position: relative;
+  padding: 8px 12px;
+  padding-left: 40px;
+  margin-right: 12px;
+  color: $blueButton;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  background: none;
+  border: 1px solid $blueButton;
+  border-radius: 4px;
+}
+.category__button::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("../../images/list-nested.svg");
+  top: 8px;
+  left: 12px;
+}
+.search__form {
+  flex-grow: 1;
+}
+.serach__form__input {
+  line-height: 24px;
+  padding: 8px 12px;
+  background: none;
+  border: 1px solid $siteGray;
+  border-radius: 4px;
+  width: calc(100% - 95px);
+}
+
+.serach__form__submit {
+  position: relative;
+  padding: 8px 12px;
+  padding-right: 36px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 4px;
+  background-color: $blueButton;
+  border: none;
+  color: white;
+}
+.serach__form__submit::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: url("../../images/search.svg");
+  top: 10px;
+  right: 12px;
+}
 .button__newAdvertisement:hover,
-.button__enter:hover {
+.button__enter:hover,
+.category__button:hover,
+.serach__form__submit:hover {
   transform: scale(1.1);
 }
 .button__newAdvertisement:active,
-.button__enter:active {
+.button__enter:active,
+.category__button:active,
+.serach__form__submit:active {
   transform: scale(0.9);
 }

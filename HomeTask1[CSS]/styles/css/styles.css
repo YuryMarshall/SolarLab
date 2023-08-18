@@ -1,3 +1,21 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #e2e8f0;
+}
+
 .header__top__container {
   width: 100%;
   height: 52px;
@@ -67,14 +85,96 @@
   right: 12px;
 }
 
+.header__bottom__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
+  padding: 24px 0;
+}
+
+.header__title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: #1e293b;
+  margin-right: 24px;
+}
+
+.category__button {
+  position: relative;
+  padding: 8px 12px;
+  padding-left: 40px;
+  margin-right: 12px;
+  color: #3b82f6;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  background: none;
+  border: 1px solid #3b82f6;
+  border-radius: 4px;
+}
+
+.category__button::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("../../images/list-nested.svg");
+  top: 8px;
+  left: 12px;
+}
+
+.search__form {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.serach__form__input {
+  line-height: 24px;
+  padding: 8px 12px;
+  background: none;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  width: calc(100% - 95px);
+}
+
+.serach__form__submit {
+  position: relative;
+  padding: 8px 12px;
+  padding-right: 36px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 4px;
+  background-color: #3b82f6;
+  border: none;
+  color: white;
+}
+
+.serach__form__submit::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: url("../../images/search.svg");
+  top: 10px;
+  right: 12px;
+}
+
 .button__newAdvertisement:hover,
-.button__enter:hover {
+.button__enter:hover,
+.category__button:hover,
+.serach__form__submit:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
 .button__newAdvertisement:active,
-.button__enter:active {
+.button__enter:active,
+.category__button:active,
+.serach__form__submit:active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
 }

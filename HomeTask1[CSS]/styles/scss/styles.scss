@@ -19,6 +19,7 @@ $siteLightGray: #64748b;
 body {
   font-family: "Inter", sans-serif;
 }
+
 .header {
   display: flex;
   margin-bottom: 32px;
@@ -26,6 +27,7 @@ body {
   align-items: center;
   border-bottom: 1px solid $siteGray;
 }
+
 .header__top__container {
   width: 100%;
   height: 52px;
@@ -34,12 +36,14 @@ body {
   background-color: $siteDarkBlue;
   padding: 8px 0px;
 }
+
 .header__buttons__container {
   height: 100%;
-  width: 70%;
+  width: 60%;
   display: flex;
   justify-content: end;
 }
+
 .button__enter {
   @include buttonCursor();
   @include buttonText();
@@ -76,6 +80,7 @@ body {
   top: 7px;
   right: 12px;
 }
+
 .header__bottom__container {
   display: flex;
   width: 60%;
@@ -89,6 +94,7 @@ body {
   color: $siteDarkBlue;
   margin-right: 24px;
 }
+
 .category__button {
   @include buttonCursor();
   position: relative;
@@ -103,6 +109,7 @@ body {
   border: 1px solid $blueButton;
   border-radius: 4px;
 }
+
 .category__button::before {
   content: "";
   position: absolute;
@@ -112,9 +119,11 @@ body {
   top: 8px;
   left: 12px;
 }
+
 .search__form {
   flex-grow: 1;
 }
+
 .serach__form__input {
   line-height: 24px;
   padding: 8px 12px;
@@ -137,6 +146,7 @@ body {
   border: none;
   color: white;
 }
+
 .serach__form__submit::after {
   content: "";
   position: absolute;
@@ -146,18 +156,21 @@ body {
   top: 10px;
   right: 12px;
 }
+
 .button__newAdvertisement:hover,
 .button__enter:hover,
 .category__button:hover,
 .serach__form__submit:hover {
   transform: scale(1.1);
 }
+
 .button__newAdvertisement:active,
 .button__enter:active,
 .category__button:active,
 .serach__form__submit:active {
   transform: scale(0.9);
 }
+
 .recommended {
   @include buttonCursor();
   display: flex;
@@ -176,30 +189,27 @@ body {
   line-height: 32px;
   font-weight: 600;
 }
+
 .recommended__container {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
+
 .recommended__card {
   width: calc(25% - 18px);
   margin-right: 24px;
   margin-bottom: 32px;
 }
+
 .recommended__card:nth-child(4n) {
   margin-right: 0;
 }
+
 .recommended__card:last-child {
   margin-right: 0;
 }
-.card__img__container {
-  display: inline-block;
-  overflow: hidden;
-}
-.card__img {
-  width: 100%;
-  margin-bottom: 8px;
-}
+
 .recommended__card:hover {
   img {
     transform: scale(1.1);
@@ -208,18 +218,31 @@ body {
     color: #135dd4;
   }
 }
+
+.card__img__container {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.card__img {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
 .card__title {
   color: $blueButton;
   font-weight: 600;
   line-height: 24px;
   font-size: 18px;
 }
+
 .card__price {
   color: $siteDarkBlue;
   font-weight: 600;
   line-height: 24px;
   font-size: 18px;
 }
+
 .card__location,
 .card__time {
   font-size: 14px;

@@ -6,6 +6,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 32px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -41,6 +42,7 @@ body {
 }
 
 .button__enter {
+  cursor: pointer;
   position: relative;
   font-size: 14px;
   border: none;
@@ -64,6 +66,7 @@ body {
 }
 
 .button__newAdvertisement {
+  cursor: pointer;
   position: relative;
   font-size: 14px;
   border: none;
@@ -102,6 +105,7 @@ body {
 }
 
 .category__button {
+  cursor: pointer;
   position: relative;
   padding: 8px 12px;
   padding-left: 40px;
@@ -141,6 +145,7 @@ body {
 }
 
 .serach__form__submit {
+  cursor: pointer;
   position: relative;
   padding: 8px 12px;
   padding-right: 36px;
@@ -177,4 +182,89 @@ body {
 .serach__form__submit:active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+}
+
+.recommended {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 48px;
+}
+
+.recommended_wrapper {
+  width: 60%;
+}
+
+.recommended__title {
+  margin-bottom: 24px;
+  color: #1e293b;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.recommended__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.recommended__card {
+  width: calc(25% - 18px);
+  margin-right: 24px;
+  margin-bottom: 32px;
+}
+
+.recommended__card:nth-child(4n) {
+  margin-right: 0;
+}
+
+.recommended__card:last-child {
+  margin-right: 0;
+}
+
+.card__img__container {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.card__img {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.recommended__card:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.recommended__card:hover .card__title {
+  color: #135dd4;
+}
+
+.card__title {
+  color: #3b82f6;
+  font-weight: 600;
+  line-height: 24px;
+  font-size: 18px;
+}
+
+.card__price {
+  color: #1e293b;
+  font-weight: 600;
+  line-height: 24px;
+  font-size: 18px;
+}
+
+.card__location,
+.card__time {
+  font-size: 14px;
+  line-height: 20px;
+  color: #64748b;
 }

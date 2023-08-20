@@ -1,6 +1,7 @@
 $blueButton: #3b82f6;
 $siteDarkBlue: #1e293b;
 $siteGray: #e2e8f0;
+$siteLightGray: #64748b;
 
 @mixin buttonText() {
   position: relative;
@@ -11,11 +12,16 @@ $siteGray: #e2e8f0;
   color: white;
 }
 
+@mixin buttonCursor() {
+  cursor: pointer;
+}
+
 body {
   font-family: "Inter", sans-serif;
 }
 .header {
   display: flex;
+  margin-bottom: 32px;
   flex-direction: column;
   align-items: center;
   border-bottom: 1px solid $siteGray;
@@ -35,6 +41,7 @@ body {
   justify-content: end;
 }
 .button__enter {
+  @include buttonCursor();
   @include buttonText();
   padding: 8px 0;
   padding-left: 28px;
@@ -53,6 +60,7 @@ body {
 }
 
 .button__newAdvertisement {
+  @include buttonCursor();
   @include buttonText();
   padding: 6px 12px;
   padding-right: 36px;
@@ -82,6 +90,7 @@ body {
   margin-right: 24px;
 }
 .category__button {
+  @include buttonCursor();
   position: relative;
   padding: 8px 12px;
   padding-left: 40px;
@@ -116,6 +125,7 @@ body {
 }
 
 .serach__form__submit {
+  @include buttonCursor();
   position: relative;
   padding: 8px 12px;
   padding-right: 36px;
@@ -147,4 +157,72 @@ body {
 .category__button:active,
 .serach__form__submit:active {
   transform: scale(0.9);
+}
+.recommended {
+  @include buttonCursor();
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+
+.recommended_wrapper {
+  width: 60%;
+}
+
+.recommended__title {
+  margin-bottom: 24px;
+  color: #1e293b;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+.recommended__container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.recommended__card {
+  width: calc(25% - 18px);
+  margin-right: 24px;
+  margin-bottom: 32px;
+}
+.recommended__card:nth-child(4n) {
+  margin-right: 0;
+}
+.recommended__card:last-child {
+  margin-right: 0;
+}
+.card__img__container {
+  display: inline-block;
+  overflow: hidden;
+}
+.card__img {
+  width: 100%;
+  margin-bottom: 8px;
+}
+.recommended__card:hover {
+  img {
+    transform: scale(1.1);
+  }
+  .card__title {
+    color: #135dd4;
+  }
+}
+.card__title {
+  color: $blueButton;
+  font-weight: 600;
+  line-height: 24px;
+  font-size: 18px;
+}
+.card__price {
+  color: $siteDarkBlue;
+  font-weight: 600;
+  line-height: 24px;
+  font-size: 18px;
+}
+.card__location,
+.card__time {
+  font-size: 14px;
+  line-height: 20px;
+  color: $siteLightGray;
 }
